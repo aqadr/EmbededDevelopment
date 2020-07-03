@@ -45,6 +45,6 @@ Two things are needed to cross compile a program
 1. A tool-chain on the host linux machine 
 2. The Sysroot- the file system of the target machine- mostly /usr and /lib directories of the target machine
 
-For Hummingboard, the pre-built toolchain can be found [here](
+For Hummingboard, the pre-built toolchain and sysroots can be found [here](https://releases.linaro.org/components/toolchain/binaries/)
 
 
