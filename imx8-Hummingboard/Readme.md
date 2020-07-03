@@ -1,11 +1,11 @@
 
-### Board Layout
+### HummingBoard Pulse Layout
 You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family/hummingboard-m/)
 ### Serial connection to Hummingboard-imx8 from linux host
 1. Connect a USB-microUSB cable to the microUSB connector on the board.
 2. Download minicom on your host Linux
 3. on a terminal type the command: \
-```minicom -b 115200 -D /dev/ttyUSB#``` (most of the time it will be 0 but can be 1, 2 ..)
+        ```minicom -b 115200 -D /dev/ttyUSB#``` (most of the time it will be 0 but can be 1, 2 ..)
 
 4. Once done, shutdown minicom using command 
          ```Ctl+A , Q```
@@ -26,13 +26,11 @@ You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family
      netmask 255.255.255.0 
      #iface eth0 inet6 auto
   ```
-  5. restart networking
-  
-  ```  sudo systemctl restart networking```
-  
+  5. restart networking 
+      ```  sudo systemctl restart networking```
+      
   6. get the device up
-  
-  ``` sudo ifup enp1s0```
+     ``` sudo ifup enp1s0```
 ### Useful networking commands for debian image
 1. networkctl — Query the status of network links. details can be found [here](https://www.freedesktop.org/software/systemd/man/networkctl.html) and [here](https://www.tecmint.com/networkctl-check-linux-network-interface-status/)
 2. ip addr
