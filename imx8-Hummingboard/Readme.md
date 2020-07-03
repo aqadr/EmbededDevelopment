@@ -5,8 +5,10 @@ You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family
 1. Connect a USB-microUSB cable to the microUSB connector on the board.
 2. Download minicom on your host Linux
 3. on a terminal type the command: 
-```minicom -b 115200 -D /dev/ttyUSB#(most of the time it will be 0 but can be 1, 2 ..)
-```
+```minicom -b 115200 -D /dev/ttyUSB#```
+
+(most of the time it will be 0 but can be 1, 2 ..)
+
 4. Once done, shutdown minicom using command 
          ```Ctl+A , Q```
 
