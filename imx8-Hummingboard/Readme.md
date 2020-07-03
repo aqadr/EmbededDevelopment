@@ -2,13 +2,15 @@
 ### HummingBoard Pulse Layout
 You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family/hummingboard-m/)
 ### Serial connection to Hummingboard-imx8 from linux host
-1. Connect a USB-microUSB cable to the microUSB connector on the board.
-2. Download minicom on your host Linux
+The easiest way is to use minicom for serial communication.
+
+1. Download minicom on your host Linux
+2. Connect a USB-microUSB cable to the microUSB port on the board.
 3. on a terminal type the command: \
         ```minicom -b 115200 -D /dev/ttyUSB#``` (most of the time it will be 0 but can be 1, 2 ..)
 
 4. Once done, shutdown minicom using command 
-         ```Ctl+A , Q```
+         ```Ctl+A and then Q```
 
 ### Setting up the RJ45 Ethernet for local networking
 1. Log in to the Hummingboard, userid: debian, password: debian
