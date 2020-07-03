@@ -14,11 +14,11 @@ You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family
           "sudo vi enp1s0"
 4. type the following 
   "
-     # eth0 automatic configuration
-     allow-hotplug enp1s0
+     # eth0 automatic configuration \
+     allow-hotplug enp1s0 \
 
-     iface enp1s0 inet static
-     address 192.168.168.2
-     netmask 255.255.255.0
-     #iface eth0 inet6 auto
+     iface enp1s0 inet static \
+     address 192.168.168.2 
+     netmask 255.255.255.0 
+     #iface eth0 inet6 auto 
   "
