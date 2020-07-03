@@ -36,5 +36,15 @@ The easiest way is to use minicom for serial communication.
 #### Useful networking commands for debian image
 1. networkctl — Query the status of network links. details can be found [here](https://www.freedesktop.org/software/systemd/man/networkctl.html) and [here](https://www.tecmint.com/networkctl-check-linux-network-interface-status/)
 2. ip addr
+3. ip link show
+4. nmcli device status
+5. nmcli connection show. Detailed descriptioncan can be found [here](https://www.cyberciti.biz/faq/linux-list-network-interfaces-names-command/)
 
 ### CrossCompile for Hummingboard 
+Two things are needed to cross compile a program
+1. A tool-chain on the host linux machine 
+2. The Sysroot- the file system of the target machine- mostly /usr and /lib directories of the target machine
+
+For Hummingboard, the pre-built toolchain can be found [here](
+
+
