@@ -12,13 +12,13 @@ You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family
 2. go to /etc/network/interface.d/
 3. you should see a file named eth0. Create a new file with either nano or vi as enp1s0
           "sudo vi enp1s0"
-4. type the following 
+4. type the following lines to the file enp1s0
   "
      # eth0 automatic configuration \
      allow-hotplug enp1s0 
 
      iface enp1s0 inet static \
-     address 192.168.168.2 \ 
+     address 192.168.168.2 \
      netmask 255.255.255.0 \
      #iface eth0 inet6 auto
   "
