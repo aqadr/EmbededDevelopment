@@ -31,6 +31,8 @@ You can find the board layout [here](https://www.solid-run.com/nxp-i-mx8m-family
       
   6. get the device up
      ``` sudo ifup enp1s0```
-### Useful networking commands for debian image
+#### Useful networking commands for debian image
 1. networkctl — Query the status of network links. details can be found [here](https://www.freedesktop.org/software/systemd/man/networkctl.html) and [here](https://www.tecmint.com/networkctl-check-linux-network-interface-status/)
 2. ip addr
+
+### CrossCompile for Hummingboard 
