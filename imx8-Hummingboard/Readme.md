@@ -60,8 +60,7 @@ c. Open "HelloWorld.cpp" with your favorite text editor and type
     {
         std::cout<<"check if cross compile works..."<<std::endl;
         return 0;
-    }
-    
+    }   
 ```
 
 Once done save the file.
@@ -87,7 +86,31 @@ An example script has been uploaded. run it from the terminal
 #### Cross Compile with configure and make
 TODO
 #### Cross Compile with CMake 
+Cross compile with CMake requires defining a cmake "toolchain file" that sets thing such as paths to compilers, name and so on. Then the "toolchain file" needs to be included in the cmake call
+##### Steps
 
+1. Create a toolchain.cmake file with the following items
+
+```
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(CMAKE_SYSROOT $PATH_TO_SYSROOT)
+set(CMAKE_STAGING_PREFIX $PATH_TO_STAGING)
+
+set(CMAKE_C_COMPILER $PATH_TO_TOOLCHAIN_DIR/bin/arm-linux-gnueabihf-gcc(aarch64-linux-gnu-gcc))
+set(CMAKE_CXX_COMPILER ${tools}/bin/arm-linux-gnueabihf-g++(aarch64-linux-gnu-g++))
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+```
+2. Add the directory to the toolchain.cmake file in the CMakeLists.txt file
+3. Create a build directory 
+4. call cmake with the toolchain.cmake file 
+
+```cmake -DCMAKE_TOOLCHAIN_FILE=/path/to/toolchain/$toolchainname.cmake ..```
 
 
 #### Cross Compile with Docker
