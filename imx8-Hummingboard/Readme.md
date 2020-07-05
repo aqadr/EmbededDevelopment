@@ -52,7 +52,7 @@ a. Create a directory where you want to keep the source file.
 b. Go to the directory and create the source file "HelloWorld.cpp"
 c. Open "HelloWorld.cpp" with your favorite text editor and type
     
-    ```
+```
     #include <iostream>
     using namespace std;
     
@@ -61,12 +61,14 @@ c. Open "HelloWorld.cpp" with your favorite text editor and type
         std::cout<<"check if cross compile works..."<<std::endl;
         return 0;
     }
-    ```
-    Once done save the file.
+    
+```
+
+Once done save the file.
     
 d. On the terminal type 
 
-   ``` ${pathToToolchain}/bin/aarch64-linux-gnu-g++ -o hello helloWorld.cpp```
+```${pathToToolchain}/bin/aarch64-linux-gnu-g++ -o hello helloWorld.cpp```
    
 e. If you try to run this prgram on your host machine, the following error will pop up
 
@@ -80,7 +82,7 @@ The previous example was a tay example that didn't have any dependencies which w
 environment variables such as ARCH/CROSS_COMPILE are needed for U-Boot and Linux makefiles to configure and call the compiler correctly. They need to be exported in a shell instance that will run configure/compile commands to build U-Boot or Linux for the target machine. 
 An example script has been uploaded. run it from the terminal
 
-     ``` source ${PATHTO}/export_compiler```
+```source ${PATHTO}/export_compiler```
      
 #### Cross Compile with configure and make
 TODO
