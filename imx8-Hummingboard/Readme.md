@@ -78,7 +78,10 @@ The previous example was a tay example that didn't have any dependencies which w
 
 #### Source Environment
 environment variables such as ARCH/CROSS_COMPILE are needed for U-Boot and Linux makefiles to configure and call the compiler correctly. They need to be exported in a shell instance that will run configure/compile commands to build U-Boot or Linux for the target machine. 
-An example 
+An example script has been uploaded. run it from the terminal
+
+     ``` source ${PATHTO}/export_compiler```
+     
 #### Cross Compile with configure and make
 TODO
 #### Cross Compile with CMake 
